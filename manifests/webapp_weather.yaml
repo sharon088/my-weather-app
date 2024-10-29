@@ -1,14 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  creationTimestamp: "2024-10-29T09:44:28Z"
   generation: 1
   labels:
     app: weather-app
   name: weather-app
   namespace: default
-  resourceVersion: "4115"
-  uid: b9279f8b-c3cd-4f25-a578-805313d355c4
 spec:
   progressDeadlineSeconds: 600
   replicas: 2
