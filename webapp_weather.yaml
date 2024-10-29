@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: "2024-10-29T09:44:28Z"
+  generation: 1
+  labels:
+    app: weather-app
+  name: weather-app
+  namespace: default
+  resourceVersion: "4115"
+  uid: b9279f8b-c3cd-4f25-a578-805313d355c4
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 2
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: weather-app
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: weather-app
+    spec:
+      containers:
+      - image: sharon088/weather_app_image:latest
+        imagePullPolicy: Always
+        name: weather-app-image-q5p9p
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+status: {}
