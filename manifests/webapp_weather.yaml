@@ -28,7 +28,7 @@ spec:
         app: weather-app
     spec:
       containers:
-      - image: sharon088/weather_app_image:1.0.3
+      - image: sharon088/weather_app_image:1.0.4
         imagePullPolicy: Always
         name: weather-app-image-q5p9p
         resources: {}
