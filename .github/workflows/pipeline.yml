@@ -45,4 +45,4 @@ jobs:
         with:
          context: .
          push: true
-         tags: sharon088/simple_python_app:${{ steps.version.outputs.version-string }}
+         tags: sharon088/weather_app_image:${{ steps.version.outputs.version-string }}
